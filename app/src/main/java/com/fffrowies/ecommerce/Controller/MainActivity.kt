@@ -2,7 +2,7 @@ package com.fffrowies.ecommerce.Controller
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.GridLayoutManager
 import com.fffrowies.ecommerce.Adapter.ProductsAdapter
 import com.fffrowies.ecommerce.Model.Product
 import com.fffrowies.ecommerce.R
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         recycler_view.apply {
-            layoutManager = LinearLayoutManager(this@MainActivity)
+            layoutManager = GridLayoutManager(this@MainActivity, 2)
             adapter = ProductsAdapter(products)
         }
     }
